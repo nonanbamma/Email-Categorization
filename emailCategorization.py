@@ -88,7 +88,7 @@ def classify(pipeline, classes, data):
     :param data: The data on which the classification is done
     :return: None
     """
-    k_fold = KFold(n_splits=5)
+    k_fold = KFold(n_splits=2)
     start = timeit.default_timer()
     foldno = 1
     for train_indices, test_indices in k_fold.split(data):
